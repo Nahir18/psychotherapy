@@ -11,27 +11,42 @@
             :src="`/pictures/${consultation.imageUrl}`"
             alt=""
         >
-        <div class="p-t-12 display-flex fd-column">
-            <div class="fw-700 fs-12px">
+        <div class="p-t-12 display-flex fd-column h-100 justify-around ta-right p-l-22 description">
+            <div class="fw-700 fs-16px ta-left">
               {{consultation.title}}
             </div>
-            <span>
+            <span
+                class="ta-left"
+            >
               {{consultation.type}}
             </span>
-            <div>
-            <span>
-              {{consultation.time}}
-            </span>
-              <span>
-              {{consultation.price}}
-            </span>
+            <div class="ta-left display-flex justify-between ">
+              <span
+                  class="ta-left"
+              >
+                {{consultation.time}}
+              </span>
+              <span
+                  class="ta-left"
+              >
+                {{consultation.price}}
+              </span>
             </div>
-            <div class="display-flex align-center justify-center">
-            <span>
-              Подробнее
-            </span>
+            <div class="display-flex align-center justify-end">
+              <span class="color-dark-green fs-16px line-h-19 p-r-8">
+                Подробнее
+              </span>
               <img :src="require('/public/linkArrow.svg')" alt="">
             </div>
+        </div>
+        <div
+          class="display-flex justify-center p-t-22"
+        >
+          <button
+              class="fs-16px bg-color-pink link-button"
+          >
+            Записаться
+          </button>
         </div>
       </div>
     </div>
@@ -82,10 +97,16 @@ export default {
     margin-top: 85px;
   }
   .consultation-card-link {
-    width: 182px;
-    height: 337px;
+    width: 246px;
+    height: 455px;
   }
   .description {
-
+    height: 164px;
+    padding-right: 27px;
+  }
+  .link-button {
+    max-width: 147px;
+    max-height: 52px;
+    margin-bottom: 33px;
   }
 </style>

@@ -22,6 +22,9 @@ export default {
 
 <style>
 @import 'styles/style.scss';
+@import 'styles/fonts.scss';
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
 .main-page {
   height: 100%;
   font-family: "Bellota text";
