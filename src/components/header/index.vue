@@ -2,9 +2,9 @@
   <div class="bg-color-black color-white header">
     <img class="logo" :src="require('/public/logo/Logo.svg')" alt="">
     <div v-for="link in headerLinks" :key="link.label">
-      <div class="header-link">
+      <a :href="link.href" class="header-link">
         {{link.label}}
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -18,27 +18,27 @@ export default {
       headerLinks: [
         {
           label: "Документы",
-          action: () => ({})
+          href: "#documents"
         },
         {
           label: "Обо мне",
-          action: () => ({})
+          href: "#about"
         },
         {
           label: "Отзывы",
-          action: () => ({})
+          href: ""
         },
         {
           label: "Для кого",
-          action: () => ({})
+          href: "#tests"
         },
         {
           label: "+7 (922) 261 23 37",
-          action: () => ({})
+          href: ""
         },
         {
           label: "Консультации",
-          action: () => ({})
+          href: "#consultations"
         }
       ]
     }

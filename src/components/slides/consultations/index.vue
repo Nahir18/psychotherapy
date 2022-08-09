@@ -1,5 +1,8 @@
 <template>
-  <div class="display-flex justify-center">
+  <div
+      class="display-flex justify-center"
+      id="consultations"
+  >
     <div class="page-content">
       <div
           class="link-card display-flex fd-column consultation-card-link bg-color-white"
@@ -42,11 +45,12 @@
         <div
           class="display-flex justify-center p-t-22"
         >
-          <button
-              class="fs-16px bg-color-pink link-button"
+          <router-link
+              class="fs-16px bg-color-pink link-button cursor display-flex align-center justify-center color-white"
+              to="/consultations"
           >
             Записаться
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -64,21 +68,21 @@ export default {
       consultations: [
         {
           title: "Индивидуальная консультация",
-          imageUrl: "consultation2.svg",
+          imageUrl: "consultations1.svg",
           type: "очные и онлайн",
           time: "1 час",
           price: "2.000р"
         },
         {
           title: "Работа с парой/семьей",
-          imageUrl: "consultation2.svg",
+          imageUrl: "consultations3.svg",
           type: "очные",
           time: "1,5-2 часа",
           price: "3.000р"
         },
         {
           title: "Груповые занятия",
-          imageUrl: "consultation2.svg",
+          imageUrl: "consultations4.svg",
           type: "очные по четвергам",
           time: "2 час",
           price: "1.000р"
@@ -105,8 +109,9 @@ export default {
     padding-right: 27px;
   }
   .link-button {
-    max-width: 147px;
-    max-height: 52px;
+    width: 147px;
+    height: 52px;
     margin-bottom: 33px;
+    border-radius: 22px;
   }
 </style>

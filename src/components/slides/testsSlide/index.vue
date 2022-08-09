@@ -1,5 +1,8 @@
 <template>
-    <div class="display-flex fd-column align-center">
+    <div
+        class="display-flex fd-column align-center"
+        id="tests"
+    >
       <div
           class="page-content"
       >

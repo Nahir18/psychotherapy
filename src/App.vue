@@ -1,21 +1,25 @@
 <template>
-  <div class="main-page">
-    <Header />
-    <MainPage />
-  </div>
+  <Layout class="main-page">
+    <router-view />
+  </Layout>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import MainPage from './components/mainPage'
-import Header from './components/header'
+// import MainPage from './components/mainPage'
+import Layout from './components/Layout'
+// import IndividualPage from './components/individual'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    MainPage,
-    Header,
+    // MainPage,
+    Layout,
+    // IndividualPage
+  },
+  data() {
+    return {
+      currentRoute: window.location.pathname
+    }
   }
 }
 </script>
@@ -28,6 +32,7 @@ export default {
 .main-page {
   height: 100%;
   font-family: "Bellota text";
+
 }
 @font-face {
   font-family: "Bellota text";
@@ -43,6 +48,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 body {
   margin: 0 0 0 0;

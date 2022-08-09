@@ -9,6 +9,7 @@
     </PageContainer>
     <PageContainer
         title="С чем могу помочь"
+        :style="{minHeight: 1502 + 'px'}"
     >
       <TestsSlide />
     </PageContainer>
@@ -19,6 +20,19 @@
     >
       <ConsultationsPage />
     </PageContainer>
+    <PageContainer
+        :style="{minHeight: 966 + 'px'}"
+        title="Документы"
+    >
+      <DocumentsPage />
+    </PageContainer>
+    <PageContainer
+        :style="{minHeight: 1023 + 'px'}"
+        title="Статьи"
+        colored
+    >
+      <ArticlesPage />
+    </PageContainer>
   </div>
 </template>
 
@@ -28,6 +42,8 @@ import AboutPage from '../slides/aboutPage'
 import TestsSlide from '../slides/testsSlide'
 import ConsultationsPage from '../slides/consultations'
 import PageContainer from '../PageContainer'
+import DocumentsPage from '../slides/documents'
+import ArticlesPage from '../slides/articles'
 export default {
   name: "MainPage",
   components: {
@@ -35,7 +51,9 @@ export default {
     AboutPage,
     TestsSlide,
     ConsultationsPage,
-    PageContainer
+    PageContainer,
+    DocumentsPage,
+    ArticlesPage
   }
 }
 </script>

@@ -4,6 +4,12 @@
 .top-l-radius {
   border-radius: 381px 0px 0px 0px
 }
+.b-r {
+  border-radius: 35px;
+}
+.text-initial {
+  text-align: initial;
+}
 .link-card {
   box-shadow: 0px 6px 16px #6F711F;
   border-radius: 23px;
@@ -20,6 +26,15 @@
 .p-r-8 {
   padding-right: 8px;
 }
+.m-r-12 {
+  margin-right: 12px;
+}
+.m-l-6 {
+  margin-left: 6px;
+}
+.p-r-16 {
+  padding-right: 16px;
+}
 .p-t-26 {
   padding-top: 26px;
 }
@@ -31,6 +46,15 @@
 }
 .p-t-22 {
   padding-top: 22px;
+}
+.p-t-20 {
+  padding-top: 20px;
+}
+.p-t-10 {
+  padding-top: 10px;
+}
+.p-t-28 {
+  padding-top: 28px;
 }
 .p-r-32 {
   padding-right: 32px;
@@ -49,6 +73,12 @@
 }
 .m-t-41 {
   margin-top: 41px;
+}
+.m-t-12 {
+  margin-top: 12px;
+}
+.p-t-40 {
+  padding-top: 41px;
 }
 .p-t-46 {
   padding-top: 46px;
@@ -71,6 +101,21 @@
 .align-center {
   align-items: center;
 }
+.align-baseline {
+  align-items: baseline;
+}
+.ta-start {
+  text-align: start;
+}
 .fd-column {
   flex-direction: column;
+}
+.cursor {
+  cursor: pointer;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.p-absolute {
+  position: absolute;
 }

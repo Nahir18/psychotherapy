@@ -1,4 +1,22 @@
-
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+div {
+  font-family: "Bellota text";
+}
+span {
+  text-align: initial;
+}
 button {
   border: none;
   outline: none;
@@ -12,5 +30,6 @@ button {
   --color-pink: #E22697;
   --color-yellow: #FFF6D0;
   --color-orange: #F7931E;
+  --color-orange-2: #FEE69F;
   --color-dark-green: #666724;
 }

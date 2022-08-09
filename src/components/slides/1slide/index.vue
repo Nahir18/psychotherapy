@@ -1,6 +1,7 @@
 <template>
-  <div class="list slide">
-    <div class="title">
+  <div class="page-container display-flex align-center justify-center">
+    <img class="" :src="'/mainPageImage.svg'" alt="">
+    <div class="title p-absolute">
       <h1>Помогу разобраться</h1>
       <span class="p-t-26">Сделай шаг к здоровой<br>и счасливой жизни!</span>
       <div class="p-t-46">
@@ -18,16 +19,15 @@ export default {
 </script>
 
 <style scoped>
-.list {
-  padding-left: 142px;
-}
-.slide {
+.page-container {
   height: 768px;
 }
 .title {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  left: 142px;
+  top: 211px
 }
 h1 {
 }

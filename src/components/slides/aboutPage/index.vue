@@ -1,5 +1,8 @@
 <template>
-    <div class="page-container">
+    <div
+        class="page-container"
+        id="about"
+    >
       <div class="display-flex ">
         <img
             class="photo"
@@ -7,7 +10,7 @@
         >
         <div class="dialogue-container">
           <img class="dialogue" :src="require('/public/dialogue.svg')" alt="">
-          <div class="dialogue-content">
+          <div class="dialogue-content ta-start">
             <span class="color-white fw-700">
               Здравствуйте! Я, психолог Марина Антонова, работаю с проблемами в семье, в отношениях с противоположным полом, друзьями и с собой. Я также помогаю избавиться от страхов, тревоги, депрессии, прожить горе, поднять самооценку, найти себя в этом мире.
             </span>
@@ -15,7 +18,7 @@
         </div>
 
       </div>
-      <div class="page-content">
+      <div class="page-content ta-start">
         Я не говорю, как правильно и как неправильно, ведь все мы абсолютно разные и то, что хорошо одному, для другого неприемлемо. Поэтому Ваше решение мы ищем вместе.
         <br>
         <br>
@@ -64,8 +67,8 @@ export default {
 }
 .dialogue-content {
   position: absolute;
-  margin: 47px 42px 39px 115px;
-  max-width: 523px;
+  margin: 34px 27px 16px 68px;
+  max-width: 418px;
   z-index: 2;
   width: 600px;
 }
