@@ -2,59 +2,78 @@
   <div>
     <FirstSlide />
     <PageContainer
-        title="Обо мне"
-        colored
+        v-for="(slide, index) in slides"
+        :key="slide.title"
+        :title="slide.title"
+        :minHeight="slide.minHeight"
+        :colored="index % 2 === 0"
+        :screenSize="screenSize"
     >
-      <AboutPage />
-    </PageContainer>
-    <PageContainer
-        title="С чем могу помочь"
-        :style="{minHeight: 1502 + 'px'}"
-    >
-      <TestsSlide />
-    </PageContainer>
-    <PageContainer
-        :style="{minHeight: 655 + 'px'}"
-        title="Консультации"
-        colored
-    >
-      <ConsultationsPage />
-    </PageContainer>
-    <PageContainer
-        :style="{minHeight: 966 + 'px'}"
-        title="Документы"
-    >
-      <DocumentsPage />
-    </PageContainer>
-    <PageContainer
-        :style="{minHeight: 1023 + 'px'}"
-        title="Статьи"
-        colored
-    >
-      <ArticlesPage />
+      <component
+          :is="slide.component"
+          :screenSize="screenSize"
+      />
     </PageContainer>
   </div>
 </template>
 
 <script>
+import PageContainer from '../PageContainer'
 import FirstSlide from '../slides/1slide'
 import AboutPage from '../slides/aboutPage'
 import TestsSlide from '../slides/testsSlide'
 import ConsultationsPage from '../slides/consultations'
-import PageContainer from '../PageContainer'
 import DocumentsPage from '../slides/documents'
 import ArticlesPage from '../slides/articles'
 export default {
   name: "MainPage",
   components: {
-    FirstSlide,
+    PageContainer,
     AboutPage,
     TestsSlide,
     ConsultationsPage,
-    PageContainer,
+    FirstSlide,
     DocumentsPage,
     ArticlesPage
-  }
+  },
+  data() {
+    return {
+      slides: [
+        {
+          component: AboutPage,
+          title: "Обо мне",
+          minHeight: "",
+          colored: true
+        },
+        {
+          component: TestsSlide,
+          title: "С чем могу помочь",
+          minHeight: ""
+        },
+        {
+          component: ConsultationsPage,
+          title: "Консультации",
+          minHeight: "",
+        },
+        {
+          component: DocumentsPage,
+          title: "Документы",
+          minHeight: "",
+        },
+        {
+          component: ArticlesPage,
+          title: "Статьи",
+          minHeight: 1023,
+        },
+      ]
+    }
+  },
+  props: {
+    screenSize: {
+      type: Number,
+      default: 0
+    },
+  },
 }
 </script>
 

@@ -47,4 +47,24 @@ export default {
     margin-top: -48px;
     color: var(--color-black);
   }
+  @media (max-width: 740px) {
+    .subtitle {
+      font-size: 48px;
+      margin-top: -10px;
+    }
+    .title {
+      font-size: 21px;
+      margin-top: -24px;
+    }
+  }
+  @media (max-width: 440px) {
+    .subtitle {
+      font-size: 24px;
+      margin-top: -6px;
+    }
+    .title {
+      font-size: 21px;
+      margin-top: -13px;
+    }
+  }
 </style>

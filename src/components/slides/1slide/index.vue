@@ -1,6 +1,6 @@
 <template>
   <div class="page-container display-flex align-center justify-center">
-    <img class="" :src="'/mainPageImage.svg'" alt="">
+    <img class="image" :src="'/mainPageImage.svg'" alt="">
     <div class="title p-absolute">
       <h1>Помогу разобраться</h1>
       <span class="p-t-26">Сделай шаг к здоровой<br>и счасливой жизни!</span>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "FirstPage"
+  name: "FirstPage",
 }
 </script>
 
@@ -28,6 +28,18 @@ export default {
   align-items: baseline;
   left: 142px;
   top: 211px
+}
+@media (max-width: 440px) {
+
+}
+@media (max-width: 750px) {
+  .image {
+    max-width: 427px;
+    max-height: 304px;
+  }
+  .page-container {
+    height: 426px;
+  }
 }
 h1 {
 }

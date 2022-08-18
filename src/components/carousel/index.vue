@@ -3,7 +3,10 @@
     <div
         class="carousel-container bg-color-yellow"
     >
-      <img :src="`/documents/${imageData[this.currentImageIndex][imageKey]}.png`" alt="">
+      <img
+          :src="`/documents/${imageData[this.currentImageIndex][imageKey]}.png`" alt=""
+          class="carousel-content"
+      >
     </div>
     <div class="display-flex justify-center p-t-19">
       <div
@@ -75,9 +78,21 @@ export default {
     border-radius: 103.183px;
     margin-top: 107px;
   }
+  .carousel-content {
+
+  }
   .carousel-dots {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+  }
+  @media (max-width: 750px) {
+    .carousel-container {
+      padding: 29px 63px;
+    }
+    .carousel-content {
+      max-width: 366px;
+      max-height: 274px;
+    }
   }
 </style>

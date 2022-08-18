@@ -15,7 +15,7 @@
             alt=""
         >
         <div class="p-t-12 display-flex fd-column h-100 justify-around ta-right p-l-22 description">
-            <div class="fw-700 fs-16px ta-left">
+            <div class="fw-700 ta-left">
               {{consultation.title}}
             </div>
             <span
@@ -36,7 +36,7 @@
               </span>
             </div>
             <div class="display-flex align-center justify-end">
-              <span class="color-dark-green fs-16px line-h-19 p-r-8">
+              <span class="color-dark-green line-h-19 p-r-8">
                 Подробнее
               </span>
               <img :src="require('/public/linkArrow.svg')" alt="">
@@ -46,7 +46,7 @@
           class="display-flex justify-center p-t-22"
         >
           <router-link
-              class="fs-16px bg-color-pink link-button cursor display-flex align-center justify-center color-white"
+              class="bg-color-pink link-button cursor display-flex align-center justify-center color-white"
               to="/consultations"
           >
             Записаться
@@ -99,6 +99,7 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 38px;
     margin-top: 85px;
+    padding-bottom: 44px;
   }
   .consultation-card-link {
     width: 246px;
@@ -113,5 +114,20 @@ export default {
     height: 52px;
     margin-bottom: 33px;
     border-radius: 22px;
+  }
+  @media (max-width: 1090px) {
+    .consultation-card-link {
+      width: 182px;
+      height: 337px;
+      font-size: 12px;
+    }
+    .link-button {
+      width: 109px;
+      height: 38px;
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 750px) {
+
   }
 </style>

@@ -1,26 +1,31 @@
 <template>
-  <Layout class="main-page">
-    <router-view />
+  <Layout
+      class="main-page"
+      :screenSize="this.screenWidth"
+  >
+    <router-view
+      :screenSize="screenWidth"
+    />
   </Layout>
 </template>
 
 <script>
-// import MainPage from './components/mainPage'
 import Layout from './components/Layout'
-// import IndividualPage from './components/individual'
-
 export default {
   name: 'App',
   components: {
-    // MainPage,
     Layout,
-    // IndividualPage
   },
   data() {
     return {
       currentRoute: window.location.pathname
     }
-  }
+  },
+  computed: {
+    screenWidth() {
+      return document.documentElement.clientWidth
+    }
+  },
 }
 </script>
 
@@ -54,6 +59,5 @@ export default {
 }
 body {
   margin: 0 0 0 0;
-  /*font-family: ;*/
 }
 </style>

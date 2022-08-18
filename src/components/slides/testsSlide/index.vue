@@ -15,10 +15,10 @@
           <img
               :src="`/pictures/${link.imageUrl}`"
               alt=""
-              class="p-t-16"
+              class="p-t-16 card-image"
           >
           <span
-              class="p-b-16 fw-700"
+              class="p-b-16 fw-700 card-title"
           >
             {{link.title}}
           </span>
@@ -30,7 +30,7 @@
         </div>
       </div>
       <button
-          class="bg-color-pink fw-400 m-t-41 fs-21px"
+          class="bg-color-pink fw-400 m-t-41 fs-21px m-b-30"
       >
         Другие тесты
       </button>
@@ -116,4 +116,26 @@ export default {
    align-items: center;
    justify-content: space-between;
  }
+  @media (max-width: 1090px) {
+    .test-card {
+      width: 175px;
+      height: 254px;
+    }
+    .page-content {
+      padding-top: 33px;
+    }
+    .card-image {
+      height: 112px;
+      width: 109px;
+    }
+  }
+  @media (max-width: 750px) {
+    .test-card {
+      width: 175px;
+      height: 254px;
+    }
+    .card-title {
+      font-size: 12px;
+    }
+  }
 </style>

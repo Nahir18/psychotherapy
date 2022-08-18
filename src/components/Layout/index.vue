@@ -1,5 +1,7 @@
 <template>
-  <Header />
+  <Header
+      :screenSize="screenSize"
+  />
     <slot />
   <Footer />
 </template>
@@ -12,7 +14,13 @@ export default {
   components: {
     Header,
     Footer
-  }
+  },
+  props: {
+    screenSize: {
+      type: Number,
+      default: 0
+    },
+  },
 }
 </script>
 

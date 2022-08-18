@@ -9,7 +9,7 @@
           v-for="item in articles"
           :key="item.title"
       >
-        <div class="fw-700 fs-21px p-r-16 display-flex align-center">
+        <div class="fw-700 p-r-16 display-flex align-center">
           {{item.title}}
         </div>
         <div class="display-flex align-center">
@@ -74,6 +74,7 @@ export default {
     padding-right: 15px;
     padding-left: 26px;
     line-height: 24px;
+    font-size: 21px;
   }
   .articles-page-container {
     display: grid;
@@ -84,5 +85,18 @@ export default {
   .image-container {
     max-height: 120px;
     border-radius: 32px;
+  }
+  @media (max-width: 1040px) {
+    .article-link {
+      width: 289px;
+      height: 104px;
+      font-size: 14px;
+    }
+    .image-container {
+      max-height: 95px;
+    }
+  }
+  @media (max-width: 750px) {
+
   }
 </style>
