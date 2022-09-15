@@ -1,7 +1,10 @@
 <template>
   <div>
-    <FirstSlide />
+    <FirstSlide
+        :screenSize="screenSize"
+    />
     <PageContainer
+        style="position: relative"
         v-for="(slide, index) in slides"
         :key="slide.title"
         :title="slide.title"

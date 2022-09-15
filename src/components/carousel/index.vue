@@ -3,10 +3,15 @@
     <div
         class="carousel-container bg-color-yellow"
     >
-      <img
-          :src="`/documents/${imageData[this.currentImageIndex][imageKey]}.png`" alt=""
-          class="carousel-content"
+      <div
+          style="height: 45vh"
+          class="display-flex align-center justify-center"
       >
+        <img
+            :src="`/documents/${imageData[this.currentImageIndex][imageKey]}`" alt=""
+            class="carousel-content"
+        >
+      </div>
     </div>
     <div class="display-flex justify-center p-t-19">
       <div
@@ -18,8 +23,7 @@
     </div>
     <div class="display-flex justify-center p-t-20">
       <div
-          class="display-flex justify-between"
-          style="width: 117px"
+          class="display-flex justify-between arrows-container"
       >
         <img
             class="cursor"
@@ -77,22 +81,41 @@ export default {
     display: inline-block;
     border-radius: 103.183px;
     margin-top: 107px;
+    min-width: 666px;
+    min-height: 448px;
   }
   .carousel-content {
-
+    max-width: 495px;
+    max-height: 370px;
   }
   .carousel-dots {
     width: 10px;
     height: 10px;
     border-radius: 50%;
   }
+  .arrows-container {
+    width: 117px;
+  }
   @media (max-width: 750px) {
     .carousel-container {
       padding: 29px 63px;
+      min-width: 493px;
+      min-height: 322px;
     }
     .carousel-content {
       max-width: 366px;
       max-height: 274px;
+    }
+    .cursor {
+      max-width: 26px;
+    }
+    .arrows-container {
+      width: 86px;
+    }
+  }
+  @media (max-width: 440px) {
+    .carousel-container {
+
     }
   }
 </style>

@@ -10,12 +10,12 @@
           :key=consultation.title
       >
         <img
-            class="p-t-19"
+            class="p-t-19 consultation-link-image"
             :src="`/pictures/${consultation.imageUrl}`"
             alt=""
         >
-        <div class="p-t-12 display-flex fd-column h-100 justify-around ta-right p-l-22 description">
-            <div class="fw-700 ta-left">
+        <div class="p-t-12 display-flex fd-column h-100 justify-around ta-right description">
+            <div class="fw-700 ta-left consultation-title">
               {{consultation.title}}
             </div>
             <span
@@ -23,7 +23,7 @@
             >
               {{consultation.type}}
             </span>
-            <div class="ta-left display-flex justify-between ">
+            <div class="ta-left display-flex justify-between consultation-link-price">
               <span
                   class="ta-left"
               >
@@ -39,11 +39,14 @@
               <span class="color-dark-green line-h-19 p-r-8">
                 Подробнее
               </span>
-              <img :src="require('/public/linkArrow.svg')" alt="">
+              <img
+                  :src="require('/public/linkArrow.svg')" alt=""
+                  class="arrow-link-image"
+              >
             </div>
         </div>
         <div
-          class="display-flex justify-center p-t-22"
+          class="display-flex justify-center"
         >
           <router-link
               class="bg-color-pink link-button cursor display-flex align-center justify-center color-white"
@@ -108,18 +111,21 @@ export default {
   .description {
     height: 164px;
     padding-right: 27px;
+    padding-left: 9%;
   }
   .link-button {
     width: 147px;
     height: 52px;
     margin-bottom: 33px;
     border-radius: 22px;
+    margin-top: 22px;
   }
   @media (max-width: 1090px) {
     .consultation-card-link {
       width: 182px;
       height: 337px;
       font-size: 12px;
+      padding-top: 19px;
     }
     .link-button {
       width: 109px;
@@ -129,5 +135,36 @@ export default {
   }
   @media (max-width: 750px) {
 
+  }
+  @media (max-width: 450px) {
+    .consultation-card-link {
+      padding-top: 9px;
+      width: 88px;
+      height: 163px;
+    }
+    .description {
+      font-size: 6px;
+      padding-right: 9px;
+    }
+    .arrow-link-image {
+      max-width: 11px;
+    }
+    .consultation-link-price {
+      padding-top: 10px;
+    }
+    .consultation-title {
+      padding-bottom: 6px;
+    }
+    .consultation-link-image {
+      width: 86px;
+      height: 61px;
+      padding-top: 0px;
+    }
+    .link-button {
+      width: 52px;
+      height: 18px;
+      font-size: 6px;
+      margin-bottom: 5px;
+    }
   }
 </style>

@@ -73,8 +73,6 @@ export default {
   box-shadow: 0px 9px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
   padding: 16px 12px;
-  /*max-width: 1044px;*/
-  /*margin: 22px 0px 0px 139px;*/
   font-size: 20px;
   font-weight: 400;
 }
@@ -147,6 +145,26 @@ export default {
   .photo {
     max-width: 147px;
     max-height: 139px;
+  }
+  .dialogue-container {
+    margin-top: 13px;
+  }
+  .page-content {
+    font-family: 'Avanti';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 31px 23px;
+  }
+  .dialogue-content {
+    font-size: 11px;
+    width: 156px;
+    padding: 12px;
+  }
+  .page-container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 </style>

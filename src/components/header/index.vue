@@ -2,7 +2,7 @@
   <div>
     <div
         v-if="screenSize > tabletScreen"
-        class="bg-color-black color-white header"
+        class="color-white header"
     >
       <img class="logo" :src="require('/public/logo/Logo.svg')" alt="">
         <div
@@ -19,8 +19,26 @@
       </div>
     </div>
     <div
-        v-else
-        class="bg-color-black color-white header"
+        v-if="screenSize <= phoneScreen"
+        class="header"
+    >
+      <img class="logo" :src="require('/public/logo/LogoBlack.svg')" alt="">
+      <div class="burger-button bg-color-orange display-flex align-center justify-center cursor">
+        <div
+            class="display-flex fd-column"
+        >
+          <img
+              v-for="index in 3"
+              :key="index"
+              :class="`${index && 'p-t-4'}`"
+              :src="require('/public/burgerBlack.svg')" alt=""
+          >
+        </div>
+      </div>
+    </div>
+    <div
+        v-if="screenSize <= tabletScreen && screenSize > phoneScreen"
+        class="color-white header"
     >
       <img class="logo" :src="require('/public/logo/Logo.svg')" alt="">
       <div class="display-flex p-r-32">
@@ -45,7 +63,7 @@
 </template>
 
 <script>
-import {HEADER_LINKS, TABLET_SCREEN_SIZE} from "@/constants";
+import {HEADER_LINKS, PHONE_SCREEN_SIZE, TABLET_SCREEN_SIZE} from "@/constants";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -53,7 +71,8 @@ export default {
   data() {
     return {
       headerLinks: HEADER_LINKS,
-      tabletScreen: TABLET_SCREEN_SIZE
+      tabletScreen: TABLET_SCREEN_SIZE,
+      phoneScreen: PHONE_SCREEN_SIZE
     }
   },
   props: {
@@ -72,12 +91,24 @@ export default {
   justify-content: space-around;
   white-space: nowrap;
   padding: 17px 0px 17px 0px;
+  background-color: var(--color-black);
+  position: relative;
+  z-index: 100;
 }
 .cursor-default {
   cursor: default;
 }
 .logo {
   padding-left: 130px;
+}
+.burger-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  display: flex;
+  position: absolute;
+  top: -10px;
+  right: -10px;
 }
 .header-link {
   display: flex;
@@ -93,6 +124,17 @@ export default {
   }
   .header-link {
     padding-right: 60px;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    background: none;
+  }
+  .logo {
+    padding-left: 57px;
+  }
+  .header-link {
+    display: none;
   }
 }
 

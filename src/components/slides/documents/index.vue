@@ -9,14 +9,14 @@
         :imageKey="'documentPhoto'"
     />
     <div class="document-description">
-      <div class="fw-700 fs-21px document-name" v-if="imageData[currentIndex].documentType">
-        {{imageData[currentIndex].documentType}}
+      <div class="fw-700 fs-21px document-name">
+        {{imageData[currentIndex].documentType || ""}}
       </div>
-      <div class="p-t-40 fs-19px document-description" v-if="imageData[currentIndex].documentName">
-        {{imageData[currentIndex].documentName}}
+      <div class="p-t-40 fs-19px">
+        {{imageData[currentIndex].documentName || ""}}
       </div>
-      <div class="p-t-40 fs-21px document-date" v-if="imageData[currentIndex].date">
-        {{`Дата: ${imageData[currentIndex].date}`}}
+      <div class="p-t-40 fs-21px document-date">
+        {{imageData[currentIndex].date && `Дата: ${imageData[currentIndex].date}` || ""}}
       </div>
     </div>
   </div>
@@ -33,19 +33,19 @@ export default {
       currentIndex: 0,
       imageData: [
         {
-          documentPhoto: "diplomPhoto",
+          documentPhoto: "diplomPhoto.png",
           documentType: "Диплом о завершении обучения по спецальности ",
           documentName: "“Психологическое консультирование и психодиагностика”",
           date: "10.01.2019"
         },
         {
-          documentPhoto: "diplomPhoto",
-          documentType: "",
+          documentPhoto: "CCI06072022.jpg",
+          documentType: "Диплом",
           documentName: "",
           date: ""
         },
         {
-          documentPhoto: "diplomPhoto",
+          documentPhoto: "CCI06072022_0002.jpg",
           documentType: "",
           documentName: "",
           date: ""
@@ -76,6 +76,7 @@ export default {
 <style scoped>
   .document-description {
     padding-top: 38px;
+    min-height: 195px;
   }
   .page-container {
     padding-bottom: 27px;

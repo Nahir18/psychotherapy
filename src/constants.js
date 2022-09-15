@@ -1,4 +1,5 @@
 export const TABLET_SCREEN_SIZE = 740
+export const PHONE_SCREEN_SIZE = 450
 export const HEADER_LINKS = [
     {
         label: "Документы",
