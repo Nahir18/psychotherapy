@@ -22,11 +22,16 @@
           >
             {{link.title}}
           </span>
-          <button
-              class="bg-color-orange test-button color-black"
+          <router-link
+              :to="{ path: `/${link.link}`}"
+
           >
-            пройти тест
-          </button>
+            <button
+                class="bg-color-orange test-button color-black"
+            >
+              пройти тест
+            </button>
+          </router-link>
         </div>
       </div>
       <button
@@ -56,7 +61,7 @@ export default {
         {
           title: "Депрессия",
           imageUrl: "testImg3.svg",
-          link: "qweqwewq"
+          link: "test/depression"
         },
         {
           title: "Горе",
