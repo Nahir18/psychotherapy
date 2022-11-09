@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-        class="carousel-container bg-color-yellow"
+        class="carousel-container"
     >
       <div
           style="height: 45vh"
@@ -81,8 +81,9 @@ export default {
     display: inline-block;
     border-radius: 103.183px;
     margin-top: 107px;
-    min-width: 666px;
-    min-height: 448px;
+    min-width: 500px;
+    min-height: 380px;
+    background-color: var(--color-yellow);
   }
   .carousel-content {
     max-width: 495px;
@@ -96,11 +97,22 @@ export default {
   .arrows-container {
     width: 117px;
   }
+  @media (max-width: 1024px) {
+    .carousel-container {
+      padding: 39px 86px;
+      min-width: 493px;
+      min-height: 322px;
+    }
+    .carousel-content {
+      max-width: 494px;
+      max-height: 370px;
+    }
+  }
   @media (max-width: 750px) {
     .carousel-container {
       padding: 29px 63px;
-      min-width: 493px;
-      min-height: 322px;
+      min-width: 366px;
+      min-height: 274px;
     }
     .carousel-content {
       max-width: 366px;
@@ -115,7 +127,13 @@ export default {
   }
   @media (max-width: 440px) {
     .carousel-container {
-
+      background-color: white;
+      border-radius: 0;
+      padding: 0;
+      display: inline-block;
+      margin-top: 0;
+      min-height: 188px;
+      min-width: 140px;
     }
   }
 </style>

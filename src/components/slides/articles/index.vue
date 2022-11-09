@@ -9,7 +9,7 @@
           v-for="item in articles"
           :key="item.title"
       >
-        <div class="fw-700 p-r-16 display-flex align-center">
+        <div class="fw-700 p-r-16 display-flex align-center article-title">
           {{item.title}}
         </div>
         <div class="display-flex align-center">
@@ -30,7 +30,7 @@ export default {
     return {
       articles: [
         {
-          title: "Постучи. Как избавиться от тревоги",
+          title: "Постучи.  Как избавиться от тревоги",
           imgLink: "image1"
         },
         {
@@ -86,6 +86,9 @@ export default {
     max-height: 120px;
     border-radius: 32px;
   }
+  .article-title {
+    padding-right: 16px;
+  }
   @media (max-width: 1040px) {
     .article-link {
       width: 289px;
@@ -96,7 +99,26 @@ export default {
       max-height: 95px;
     }
   }
-  @media (max-width: 750px) {
-
+  @media (max-width: 765px) {
+    .articles-page-container {
+      grid-column-gap: 30px;
+    }
+    .article-link {
+      padding-left: 21px;
+    }
+  }
+  @media (max-width: 440px) {
+    .articles-page-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .article-link {
+      padding-left: 16px;
+      width: 204px;
+    }
+    .article-title {
+      font-size: 10px;
+      padding-right: 10px;
+    }
   }
 </style>

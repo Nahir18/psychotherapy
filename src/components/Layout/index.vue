@@ -3,7 +3,9 @@
       :screenSize="screenSize"
   />
     <slot />
-  <Footer />
+  <Footer
+      :screenSize="screenSize"
+  />
 </template>
 
 <script>

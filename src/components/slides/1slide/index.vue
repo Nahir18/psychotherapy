@@ -31,9 +31,13 @@
         <div
             class="display-flex justify-end p-t-46"
         >
-          <button class="bg-color-pink">
-            Сделать шаг
-          </button>
+          <router-link
+              to="/consultations"
+          >
+            <button class="bg-color-pink">
+              Сделать шаг
+            </button>
+          </router-link>
         </div>
       </div>
       <img

@@ -65,7 +65,7 @@ export default {
   page-title {
     
   }
-  @media (max-width: 750px) {
+  @media (max-width: 780px) {
     .page-title {
       font-size: 24px;
     }

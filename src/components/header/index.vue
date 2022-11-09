@@ -79,7 +79,7 @@ export default {
     screenSize: {
       type: Number,
       default: 0
-    },
+    }
   },
 }
 </script>

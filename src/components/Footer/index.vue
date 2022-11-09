@@ -1,11 +1,10 @@
 <template>
   <div class="footer-container bg-color-black display-flex justify-between align-center color-white">
      <div
-         style="padding-left: 112px"
          class="display-flex fd-column"
      >
-       <img :src="require('/public/logo/bigLogo.svg')" alt="">
-       <span class="p-t-10">
+       <img class="logo" :src="require('/public/logo/bigLogo.svg')" alt="">
+       <span class="p-t-10 logo-text">
          Марина Антонова
          <br>
          психолог
@@ -13,9 +12,8 @@
      </div>
     <div
         class="display-flex fd-column align-baseline p-t-10"
-        style="margin-right: 115px"
     >
-      <span>
+      <span v-if="screenSize >= 745">
         Записаться можно по номеру телефона
         <br>
         или через соц. сети и мессенджеры
@@ -30,7 +28,7 @@
             :href="`${item.href}`"
             target="_blank"
         >
-          <img class="m-r-12 cursor" :src="`/socialLogos/${item.logo}`" alt="">
+          <img class="m-r-12 cursor social-logo" :src="`/socialLogos/${item.logo}`" alt="">
         </a>
       </div>
     </div>
@@ -40,6 +38,12 @@
 <script>
 export default {
   name: "FooterComponent",
+  props: {
+    screenSize: {
+      type: Number,
+      default: 0
+    },
+  },
   data() {
     return {
       socialLogos: [
@@ -68,5 +72,35 @@ export default {
 <style scoped>
   .footer-container {
     min-height: 195px;
+    padding-left: 112px;
+    padding-right: 114px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 840px) {
+    .footer-container {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+  @media (max-width: 440px) {
+    .footer-container {
+      min-height: 113px;
+      padding-left: 40px;
+      padding-right: 40px;
+      display: flex;
+      font-size: 10px;
+      justify-content: space-between;
+    }
+    .social-logo {
+      max-width: 15px;
+      max-height: 15px;
+    }
+    .logo {
+      max-height: 34px;
+    }
+    .logo-text {
+      padding-top: 2px;
+    }
   }
 </style>

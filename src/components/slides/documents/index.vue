@@ -12,7 +12,7 @@
       <div class="fw-700 fs-21px document-name">
         {{imageData[currentIndex].documentType || ""}}
       </div>
-      <div class="p-t-40 fs-19px">
+      <div class="p-t-40 fs-19px document-name">
         {{imageData[currentIndex].documentName || ""}}
       </div>
       <div class="p-t-40 fs-21px document-date">
@@ -50,18 +50,18 @@ export default {
           documentName: "",
           date: ""
         },
-        {
-          documentPhoto: "diplomPhoto",
-          documentType: "",
-          documentName: "",
-          date: ""
-        },
-        {
-          documentPhoto: "diplomPhoto",
-          documentType: "",
-          documentName: "",
-          date: ""
-        },
+        // {
+        //   documentPhoto: "diplomPhoto",
+        //   documentType: "",
+        //   documentName: "",
+        //   date: ""
+        // },
+        // {
+        //   documentPhoto: "diplomPhoto",
+        //   documentType: "",
+        //   documentName: "",
+        //   date: ""
+        // },
       ]
     }
   },
@@ -90,6 +90,17 @@ export default {
     }
     .document-date {
       font-size: 16px;
+    }
+  }
+  @media (max-width: 440px) {
+    .document-name {
+      font-size: 12px;
+    }
+    .document-description {
+      font-size: 10px;
+    }
+    .document-date {
+      font-size: 14px;
     }
   }
 </style>
